@@ -61,3 +61,57 @@ console.log(person1.isAllowed());
 //# makes it private
 //Property '#idNumber' is not accessible outside
 //class 'Person' because it has a private identifier.
+
+//polimorphism
+
+class Car {
+  constructor() {}
+  getEmblem(): string {
+    return "🚗";
+  }
+}
+
+class SportsCar extends Car {
+  override getEmblem(): string {
+    return "🏎️💨";
+  }
+}
+
+const formula1 = new SportsCar();
+console.log(formula1.getEmblem());
+
+const mersedes = new Car();
+console.log(mersedes.getEmblem());
+
+//example
+
+class ProgrammingLanguage {
+  constructor() {}
+  getObject(): string {
+    return "object in the language";
+  }
+}
+
+class Javascript extends ProgrammingLanguage {
+  override getObject(): string {
+    return "object in the language - js";
+  }
+}
+
+class C extends ProgrammingLanguage {
+  override getObject(): string {
+    return "object in the language - C";
+  }
+}
+
+const programming1 = new Javascript();
+console.log(programming1.getObject());
+
+const programming2 = new C();
+console.log(programming2.getObject());
+
+const mainProgram = new ProgrammingLanguage();
+console.log(mainProgram.getObject());
+
+
+//
