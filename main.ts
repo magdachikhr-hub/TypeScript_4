@@ -94,13 +94,13 @@ class ProgrammingLanguage {
 
 class Javascript extends ProgrammingLanguage {
   override getObject(): string {
-    return "object in the language - js";
+    return `{name: "magda", age = 20}`;
   }
 }
 
 class C extends ProgrammingLanguage {
   override getObject(): string {
-    return "object in the language - C";
+    return `return "typedef struct {int speed;int gear;} Car;`;
   }
 }
 
@@ -112,6 +112,5 @@ console.log(programming2.getObject());
 
 const mainProgram = new ProgrammingLanguage();
 console.log(mainProgram.getObject());
-
 
 //

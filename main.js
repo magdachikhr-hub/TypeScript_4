@@ -72,12 +72,12 @@ class ProgrammingLanguage {
 }
 class Javascript extends ProgrammingLanguage {
     getObject() {
-        return "object in the language - js";
+        return `{name: "magda", age = 20}`;
     }
 }
 class C extends ProgrammingLanguage {
     getObject() {
-        return "object in the language - C";
+        return `return "typedef struct {int speed;int gear;} Car;`;
     }
 }
 const programming1 = new Javascript();
