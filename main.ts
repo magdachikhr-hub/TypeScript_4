@@ -100,7 +100,7 @@ class Javascript extends ProgrammingLanguage {
 
 class C extends ProgrammingLanguage {
   override getObject(): string {
-    return `return "typedef struct {int speed;int gear;} Car;`;
+    return `typedef struct {int speed;int gear;} Car`;
   }
 }
 
@@ -113,4 +113,55 @@ console.log(programming2.getObject());
 const mainProgram = new ProgrammingLanguage();
 console.log(mainProgram.getObject());
 
+//another way
+// class ProgrammingLanguage1 {
+//   getObject() {
+//     return "object";
+//   }
+// }
+
+// class Javascript1 extends ProgrammingLanguage1 {
+//   override getObject() {
+//     return '{name = "natia", age = 23}';
+//   }
+// }
+
+// class C extends ProgrammingLanguage1 {
+//   override getObject() {
+//     return "typedef struct {int speed;int gear;} Car;";
+//   }
+// }
+
+// const generalLanguage = new ProgrammingLanguage1();
+
+// const js = new Javascript1();
+// const c = new C();
+
+// console.log(generalLanguage.getObject());
+// console.log(js.getObject());
+// console.log(c.getObject());
+
+// Abstraction
+
+class CoffeMachine {
+  makeCofee() {
+    this.#addWater();
+    this.#addCoffe();
+  }
+
+  #addWater() {
+    console.log("added water");
+  }
+  #addCoffe() {
+    console.log("added coffee");
+  }
+}
+
+const coffee = new CoffeMachine();
+
+console.log(coffee.makeCofee());
+
 //
+const date = new Date();
+
+console.log(date);
