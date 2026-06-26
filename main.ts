@@ -147,6 +147,7 @@ class CoffeMachine {
   makeCofee() {
     this.#addWater();
     this.#addCoffe();
+    return "☕ Coffee is ready!";
   }
 
   #addWater() {
@@ -165,3 +166,5 @@ console.log(coffee.makeCofee());
 const date = new Date();
 
 console.log(date);
+
+//The internal process can change, but the interface you use stays simple. That's abstraction.
